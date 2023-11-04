@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/Admin/js/jquery-1.7.min.js"></script>
+<script src="/Admin/js/jquery.form.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="/Admin/js/user_functions.js"></script>
+<script>
+google.load("visualization", "1", {packages:["corechart"]});
+</script>
+
+				<title>Новости</title>
+				<meta name="description" content="">
+				<meta name="keywords" content=""><link media="all" href="/css/style.css?date=20231103180636" rel="stylesheet">
+<link media="all" href="/css/stolzl.css" rel="stylesheet">
+<link rel="stylesheet" href="https://i.icomoon.io/public/ce1f1167f4/MOS/style.css">
+<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/js/fancybox/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css" media="screen" />
+<link type="text/css" href="/js/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="/js/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/functions.js?date=20231103180636"></script>
+<script type="text/javascript" src="/js/jquery.flexisel.js"></script>
+<script type="text/javascript" src="/Admin/js/shop.site.js?v=3"></script>
+<!--<script src="//api-maps.yandex.ru/2.1.20/?lang=ru_RU"></script>-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/files/imagecache/c05e85be5ba290adc69499c355fb4093.png" /><link rel="apple-touch-icon" sizes="57x57" href="/files/imagecache/1a8f0440c62429bccf9feb2a2872f61a.png"><link rel="apple-touch-icon" sizes="114x114" href="/files/imagecache/48a738918acf2bd11846d2b7ee9d0038.png"><link rel="apple-touch-icon" sizes="72x72" href="/files/imagecache/da8a6f019bafba7b8e81d8078f0a9226.png"><link rel="apple-touch-icon" sizes="144x144" href="/files/imagecache/d49dda580721f83725b50f0f56d62c7b.png"><link rel="apple-touch-icon" sizes="60x60" href="/files/imagecache/b72cea7198dd17d3d4a1bddf54ac8f45.png"><link rel="apple-touch-icon" sizes="120x120" href="/files/imagecache/a19f981f448f7a8f53aae8f13daac4d5.png"><link rel="apple-touch-icon" sizes="76x76" href="/files/imagecache/c9072d2560ec803a91a5a6d96840cea3.png"><link rel="apple-touch-icon" sizes="152x152" href="/files/imagecache/704c2394815aa2fc3384032fe7a65d79.png"></head><body ><!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(42147484, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/42147484" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --><div class="header">
+	<div class="content">
+		<a href="/" class="nored"><img class="fs" src="/images/logo-predporf.svg"/><img class="ms" src="/images/logo-mob.svg"/></a>
+		<div class="hright">
+			<div class="main-menu">
+				<ul>
+										<li><a href="javascript:void(0)" class="">Разделы</a>								<i class="icon-arrow"></i><div><ul>
+																<li><span>Исследовательский сектор</span><ul>
+																	<li><a href="/profili/arc">«Испытания» (Арктика)</a></li>
+																		<li><a href="/profili/sci">«Исследования» (Научно-исследовательский)</a></li>
+																		<li><a href="/profili/elect">«Электроника» (Электронные системы)</a></li>
+																	</ul>
+							</li>
+															<li><span>Продуктовый сектор</span><ul>
+																	<li><a href="/profili/aero">«Аэрокосмос» (Аэрокосмический)</a></li>
+																		<li><a href="/profili/inzh">«Инженерия» (Инженерно-конструкторский)</a></li>
+																		<li><a href="/profili/inf">«ИТ» (Информационные технологии)</a></li>
+																	</ul>
+							</li>
+															<li><span>Технологический сектор</span><ul>
+																	<li><a href="/profili/tehno">«Технология материалов» (Технологический)</a></li>
+																		<li><a href="/profili/chem">«ХимБиоТех» (Химико-биотехнологический)</a></li>
+																	</ul>
+							</li>
+													</ul>
+							</div>
+								</li>
+												<li><a href="/news" class="selected">Новости</a></li>
+												<li><a href="javascript:void(0)" class="">Подготовка</a>									<i class="icon-arrow"></i><div><ul>
+																			<li><a href="/tasks">Задания</a></li>
+																				<li><a href="/links">Полезные ссылки</a></li>
+																			</ul></div>
+									</li>
+												<li><a href="/contacts" class="">Контакты</a></li>
+										</ul>
+			</div>
+			<a href="#" class="fs"><i class="icon-vk"></i></a>
+		</div>
+		<a href="javascript:showMenu()" class="ms"><i class="icon-menu"></i></a>
+	</div>
+</div>
+<div class="content ">
+	<div class="p-menu">
+		<div>
+			<a href="#about">Описание</a>
+			<a href="#news">Новости раздела</a>
+			<a href="#schedule">Расписание</a>
+						<a href="#org">Организационная информация</a>
+						<a href="/tasks/?year=">Задания <i class="icon-arrow-link"></i></a>
+			<a href="#system">Система оценивания</a>
+					</div>
+	</div>
+	<div class="short-content">
+		<div class="bread-crumbs">
+			<a href="/">Главная</a>
+			<span>Новости</span>					</div>
+				<h1 class="">Новости</h1>
+<div class="rel">
+		<div class="select red margin_for_select_olymp_for_news">Все новости</div>
+	<div id="select_olympiads_news" class="select_variants popup">
+		<div><span class="red">Все новости</span></div>
+		<ul>
+					<li><span>Исследовательский сектор</span><ul>
+			<li><a href="/news?profile=arc">«Испытания» (Арктика)</a></li><li><a href="/news?profile=sci">«Исследования» (Научно-исследовательский)</a></li><li><a href="/news?profile=elect">«Электроника» (Электронные системы)</a></li>		</ul></li>
+						<li><span>Продуктовый сектор</span><ul>
+			<li><a href="/news?profile=aero">«Аэрокосмос» (Аэрокосмический)</a></li><li><a href="/news?profile=inzh">«Инженерия» (Инженерно-конструкторский)</a></li><li><a href="/news?profile=inf">«ИТ» (Информационные технологии)</a></li>		</ul></li>
+						<li><span>Технологический сектор</span><ul>
+			<li><a href="/news?profile=tehno">«Технология материалов» (Технологический)</a></li><li><a href="/news?profile=chem">«ХимБиоТех» (Химико-биотехнологический)</a></li>		</ul></li>
+					</ul>
+	</div>
+</div>
+<div class="news">
+				<div class="news_item"><span class="date red">1 ноября</span><div class="news_list_in_day">		<a href="/news/259" class="name with_arrow2">Старт отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">21 апреля</span><div class="news_list_in_day">		<a href="/news/258" class="name with_arrow2">Опубликованы списки победителей и призеров</a>
+				</div></div><div class="news_item"><span class="date red">19 апреля</span><div class="news_list_in_day">		<a href="/news/257" class="name with_arrow2">Граничные баллы победителей и призеров заключительного этапа по химико-биотехнологическому профиле</a>
+				</div></div><div class="news_item"><span class="date red">15 апреля</span><div class="news_list_in_day">		<a href="/news/256" class="name with_arrow2">Граничные баллы победителей и призеров заключительного этапа по некоторым профилям</a>
+						<a href="/news/255" class="name with_arrow2">Продлена возможность подачи апелляции по Химико-биотехнологическому профилю</a>
+				</div></div><div class="news_item"><span class="date red">13 апреля</span><div class="news_list_in_day">		<a href="/news/254" class="name with_arrow2">Продлена возможность подачи апелляции по Инженерно-конструкторскому профилю</a>
+						<a href="/news/253" class="name with_arrow2">Проведение апелляции Аэрокосмического профиля</a>
+				</div></div><div class="news_item"><span class="date red">12 апреля</span><div class="news_list_in_day">		<a href="/news/252" class="name with_arrow2">Доступны результаты заключительного этапа по Научно-исследовательскому профилю</a>
+						<a href="/news/251" class="name with_arrow2">Доступны результаты заключительного этапа по Инженерно-конструкторскому профилю</a>
+						<a href="/news/250" class="name with_arrow2">Доступны результаты заключительного этапа по Химико-биотехнологическому профилю</a>
+				</div></div><div class="news_item"><span class="date red">11 апреля</span><div class="news_list_in_day">		<a href="/news/249" class="name with_arrow2">Доступны результаты заключительного этапа по профилю Арктика</a>
+				</div></div><div class="news_item"><span class="date red">7 апреля</span><div class="news_list_in_day">		<a href="/news/248" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по профилю "Электронные системы"</a>
+						<a href="/news/247" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по Аэрокосмическому профилю.</a>
+						<a href="/news/246" class="name with_arrow2">Подведение итогов после апелляций</a>
+				</div></div><div class="news_item"><span class="date red">4 апреля</span><div class="news_list_in_day">		<a href="/news/245" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников Химико-биотехнологического профиля</a>
+						<a href="/news/244" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по профилю Информационные технологии.</a>
+						<a href="/news/243" class="name with_arrow2">Организационная информация для участников заключительного этапа Олимпиады по профилю "Научно-исследовательский"</a>
+				</div></div><div class="news_item"><span class="date red">2 апреля</span><div class="news_list_in_day">		<a href="/news/241" class="name with_arrow2">Сдача отчета по командно-практическому заданию</a>
+						<a href="/news/240" class="name with_arrow2">Организационная информация о проведении заключительного этапа олимпиады по профилю "Инженерно-конструкторский"</a>
+				</div></div><div class="news_item"><span class="date red">1 апреля</span><div class="news_list_in_day">		<a href="/news/239" class="name with_arrow2">Расписание защиты заочной кейсовой задачи профиля "Арктика" 1 апреля с 13.00</a>
+				</div></div><div class="news_item"><span class="date red">30 марта</span><div class="news_list_in_day">		<a href="/news/238" class="name with_arrow2">Подготовка к  заключительному этапу профиля "Арктика"</a>
+				</div></div><div class="news_item"><span class="date red">29 марта</span><div class="news_list_in_day">		<a href="/news/242" class="name with_arrow2">Организационная информация для участников заключительного этапа Олимпиады по профилю "Арктика"</a>
+						<a href="/news/237" class="name with_arrow2">Организационная информация для участников заключительного этапа Олимпиады по профилю "Арктика"</a>
+				</div></div><div class="news_item"><span class="date red">27 марта</span><div class="news_list_in_day">		<a href="/news/236" class="name with_arrow2">Организационная информация для участников заключительного этапа Олимпиады по профилю "Электронные системы"</a>
+				</div></div><div class="news_item"><span class="date red">22 марта</span><div class="news_list_in_day">		<a href="/news/235" class="name with_arrow2">Вебинар с организационной информацией по финалу Московской предпрофессиональной олимпиады, Инженерно-конструкторский профиль</a>
+				</div></div><div class="news_item"><span class="date red">21 марта</span><div class="news_list_in_day">		<a href="/news/234" class="name with_arrow2">Приглашаем участников заключительного этапа "Аэрокосмического профиля" 
+</a>
+				</div></div><div class="news_item"><span class="date red">15 марта</span><div class="news_list_in_day">		<a href="/news/233" class="name with_arrow2">Открыты регистрации на заключительный этап</a>
+				</div></div><div class="news_item"><span class="date red">14 марта</span><div class="news_list_in_day">		<a href="/news/232" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников профиля Информационные технологии</a>
+				</div></div><div class="news_item"><span class="date red">8 марта</span><div class="news_list_in_day">		<a href="/news/231" class="name with_arrow2">Уважаемые участники! Мы рады сообщить проходные баллы по практическому туру отборочного этапа!</a>
+				</div></div><div class="news_item"><span class="date red">22 февраля</span><div class="news_list_in_day">		<a href="/news/230" class="name with_arrow2">Завершение практического тура отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">13 февраля</span><div class="news_list_in_day">		<a href="/news/229" class="name with_arrow2">Опубликованы рекомендации к оформлению документации по кейсовым заданиям Инженерно-конструкторского профиля</a>
+				</div></div><div class="news_item"><span class="date red">31 января</span><div class="news_list_in_day">		<a href="/news/228" class="name with_arrow2">Опубликованы дополнительные рекомендации по кейсам профиля "Электронные системы"</a>
+				</div></div><div class="news_item"><span class="date red">10 января</span><div class="news_list_in_day">		<a href="/news/227" class="name with_arrow2">Запись установочного вебинара инженерно-конструкторского профиля 30.12.2022</a>
+				</div></div><div class="news_item"><span class="date red">9 января</span><div class="news_list_in_day">		<a href="/news/226" class="name with_arrow2">Открыта регистрация на практический тур отборочного этапа</a>
+						<a href="/news/224" class="name with_arrow2">Опубликованы списки приглашенных участников на практический тур отборочного этапа.</a>
+				</div></div><div class="news_item"><span class="date red">30 декабря 2022</span><div class="news_list_in_day">		<a href="/news/223" class="name with_arrow2">Опубликовано видео вводного семинара профиля "Электронные системы"</a>
+				</div></div><div class="news_item"><span class="date red">28 декабря 2022</span><div class="news_list_in_day">		<a href="/news/222" class="name with_arrow2">Опубликованы проходные баллы</a>
+				</div></div><div class="news_item"><span class="date red">22 декабря 2022</span><div class="news_list_in_day">		<a href="/news/221" class="name with_arrow2">Открыты результаты и апелляция теоретического тура отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">1 декабря 2022</span><div class="news_list_in_day">		<a href="/news/220" class="name with_arrow2">Начало теоретического тура отборочного этапа Предпрофессиональной олимпиады школьников!</a>
+				</div></div><div class="news_item"><span class="date red">15 ноября 2022</span><div class="news_list_in_day">		<a href="/news/219" class="name with_arrow2">Открыта регистрация на отборочный этап Предпрофессиональной олимпиады школьников!</a>
+				</div></div><div class="news_item"><span class="date red">12 октября 2022</span><div class="news_list_in_day">		<a href="/news/218" class="name with_arrow2">Отборочный тур олимпиады в профиле "Электронные системы"</a>
+				</div></div><div class="news_item"><span class="date red">24 июня 2022</span><div class="news_list_in_day">		<a href="/news/217" class="name with_arrow2">Как забрать дипломы и подарки победителям и призерам Инженерно-конструкторского профиля.</a>
+				</div></div><div class="news_item"><span class="date red">2 июня 2022</span><div class="news_list_in_day">		<a href="/news/216" class="name with_arrow2">Награждение призеров и победителей Инженерно-конструкторского профиля</a>
+				</div></div><div class="news_item"><span class="date red">5 мая 2022</span><div class="news_list_in_day">		<a href="/news/215" class="name with_arrow2">Критерии определения победителей и призеров Аэрокосмического профиля</a>
+				</div></div><div class="news_item"><span class="date red">4 мая 2022</span><div class="news_list_in_day">		<a href="/news/214" class="name with_arrow2">Критерии определения победителей и призеров профиля Информационные технологии</a>
+						<a href="/news/213" class="name with_arrow2">Критерии определения победителей и призеров профиля Арктика</a>
+				</div></div><div class="news_item"><span class="date red">29 апреля 2022</span><div class="news_list_in_day">		<a href="/news/212" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по аэрокосмическому профилю.</a>
+				</div></div><div class="news_item"><span class="date red">28 апреля 2022</span><div class="news_list_in_day">		<a href="/news/211" class="name with_arrow2">Критерии определения победителей и призеров Биотехнологического профиля</a>
+				</div></div><div class="news_item"><span class="date red">25 апреля 2022</span><div class="news_list_in_day">		<a href="/news/210" class="name with_arrow2">Критерии определения победителей и призеров Инженерно-конструктороского профиля. </a>
+				</div></div><div class="news_item"><span class="date red">20 апреля 2022</span><div class="news_list_in_day">		<a href="/news/209" class="name with_arrow2">Сбор данных победителей и призеров заключительного этапа</a>
+						<a href="/news/208" class="name with_arrow2">Критерии определения победителей и призеров Научно-технологического профиля</a>
+						<a href="/news/207" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по профилю Арктика.</a>
+						<a href="/news/206" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по профилю Информационные технологии.</a>
+						<a href="/news/205" class="name with_arrow2">Заключительный этап Аэрокосмического профиля</a>
+				</div></div><div class="news_item"><span class="date red">19 апреля 2022</span><div class="news_list_in_day">		<a href="/news/204" class="name with_arrow2">Критерии определения победителей и призеров Технологического профиля</a>
+				</div></div><div class="news_item"><span class="date red">16 апреля 2022</span><div class="news_list_in_day">		<a href="/news/203" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по биотехнологическому профилю.</a>
+				</div></div><div class="news_item"><span class="date red">14 апреля 2022</span><div class="news_list_in_day">		<a href="/news/202" class="name with_arrow2">Доступны результаты заключительного этапа по инженерно-конструкторскому профилю.</a>
+				</div></div><div class="news_item"><span class="date red">6 апреля 2022</span><div class="news_list_in_day">		<a href="/news/201" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по научно-технологическому профилю.</a>
+				</div></div><div class="news_item"><span class="date red">31 марта 2022</span><div class="news_list_in_day">		<a href="/news/200" class="name with_arrow2">Уважаемые участники! Доступны результаты заключительного этапа по технологическому профилю.</a>
+				</div></div><div class="news_item"><span class="date red">27 марта 2022</span><div class="news_list_in_day">		<a href="/news/199" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников профиля Арктика</a>
+				</div></div><div class="news_item"><span class="date red">25 марта 2022</span><div class="news_list_in_day">		<a href="/news/197" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников Биотехнологического профиля</a>
+				</div></div><div class="news_item"><span class="date red">23 марта 2022</span><div class="news_list_in_day">		<a href="/news/196" class="name with_arrow2">ИК профиль. Информация о расписании финального дня (27.03)</a>
+				</div></div><div class="news_item"><span class="date red">21 марта 2022</span><div class="news_list_in_day">		<a href="/news/195" class="name with_arrow2">Опубликована информация о распределении команд ИК профиля по площадкам в первый день финала олимпиады (26.03)</a>
+				</div></div><div class="news_item"><span class="date red">17 марта 2022</span><div class="news_list_in_day">		<a href="/news/194" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников профиля Информационные технологии</a>
+						<a href="/news/193" class="name with_arrow2">Инженерно-конструкторское направление. Список компетенций, рекомендуемых для успешного прохождения финала олимпиады.</a>
+				</div></div><div class="news_item"><span class="date red">11 марта 2022</span><div class="news_list_in_day">		<a href="/news/192" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников по технологическому профилю</a>
+				</div></div><div class="news_item"><span class="date red">10 марта 2022</span><div class="news_list_in_day">		<a href="/news/191" class="name with_arrow2">Информация для участников финала предпрофессиональной олимпиады по научно-технологическому профилю
+</a>
+				</div></div><div class="news_item"><span class="date red">9 марта 2022</span><div class="news_list_in_day">		<a href="/news/190" class="name with_arrow2">Уважаемые участники! Мы рады сообщить проходные баллы по практическому отборочному этапу!</a>
+				</div></div><div class="news_item"><span class="date red">17 февраля 2022</span><div class="news_list_in_day">		<a href="/news/189" class="name with_arrow2">Крайний срок сдачи технической документации - 20.02.2022 до 23.59.</a>
+				</div></div><div class="news_item"><span class="date red">16 февраля 2022</span><div class="news_list_in_day">		<a href="/news/188" class="name with_arrow2">Консультации по кейсам Инженерно-конструкторского профиля</a>
+				</div></div><div class="news_item"><span class="date red">31 января 2022</span><div class="news_list_in_day">		<a href="/news/187" class="name with_arrow2">Регистрация на практический тур и формирование команд продлено до 15 февраля</a>
+				</div></div><div class="news_item"><span class="date red">19 января 2022</span><div class="news_list_in_day">		<a href="/news/186" class="name with_arrow2">Открыта регистрация на второй тур отборочного этапа!</a>
+				</div></div><div class="news_item"><span class="date red">18 января 2022</span><div class="news_list_in_day">		<a href="/news/185" class="name with_arrow2">Появилось расписание консультаций по кейсам инженерно-конструкторского профиля</a>
+				</div></div><div class="news_item"><span class="date red">24 декабря 2021</span><div class="news_list_in_day">		<a href="/news/225" class="name with_arrow2">Опубликованы списки приглашенных участников на практический тур отборочного этапа.</a>
+						<a href="/news/183" class="name with_arrow2">Опубликованы списки приглашенных участников на практический тур отборочного этапа.</a>
+						<a href="/news/182" class="name with_arrow2">27 декабря 2021 года в 15.00  пройдет презентация заочных кейсов по Технологическому профилю (технологического направления).</a>
+				</div></div><div class="news_item"><span class="date red">22 декабря 2021</span><div class="news_list_in_day">		<a href="/news/181" class="name with_arrow2">Презентация кейсов Инженерно-конструкторсокого профиля</a>
+						<a href="/news/180" class="name with_arrow2">Опубликованы граничные баллы и расписание вебинаров</a>
+				</div></div><div class="news_item"><span class="date red">14 декабря 2021</span><div class="news_list_in_day">		<a href="/news/179" class="name with_arrow2">Открыта апелляция теоретического тура отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">13 декабря 2021</span><div class="news_list_in_day">		<a href="/news/178" class="name with_arrow2">Опубликованы результаты теоретического тура отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">29 ноября 2021</span><div class="news_list_in_day">		<a href="/news/177" class="name with_arrow2">Ссылка и логин/пароль для входа в тестирующую систему для выполнения заданий по информатике отображается.</a>
+				</div></div><div class="news_item"><span class="date red">20 ноября 2021</span><div class="news_list_in_day">		<a href="/news/176" class="name with_arrow2">Начало теоретического тура отборочного этапа Предпрофессиональной олимпиады школьников!</a>
+				</div></div><div class="news_item"><span class="date red">11 ноября 2021</span><div class="news_list_in_day">		<a href="/news/175" class="name with_arrow2">Предпрофессиональная школа в «Полёте»</a>
+				</div></div><div class="news_item"><span class="date red">26 октября 2021</span><div class="news_list_in_day">		<a href="/news/174" class="name with_arrow2">Открыта регистрация на отборочный этап Предпрофессиональной олимпиады школьников!</a>
+				</div></div><div class="news_item"><span class="date red">9 октября 2021</span><div class="news_list_in_day">		<a href="/news/173" class="name with_arrow2">Предпрофессиональная школа в «Полёте»</a>
+				</div></div><div class="news_item"><span class="date red">29 августа 2021</span><div class="news_list_in_day">		<a href="/news/172" class="name with_arrow2">Уважаемые победители и призеры Предпрофессиональной олимпиады!
+Приглашаем поучаствовать в конкурсе для участия в тематической смене "Океан" и "Орленок" от НИТУ "МИСиС".</a>
+				</div></div><div class="news_item"><span class="date red">16 июня 2021</span><div class="news_list_in_day">		<a href="/news/170" class="name with_arrow2">Уважаемые участники!</a>
+				</div></div><div class="news_item"><span class="date red">3 июня 2021</span><div class="news_list_in_day">		<a href="/news/169" class="name with_arrow2">Уважаемые участники!</a>
+				</div></div><div class="news_item"><span class="date red">17 мая 2021</span><div class="news_list_in_day">		<a href="/news/166" class="name with_arrow2">Уважаемые участники!</a>
+				</div></div><div class="news_item"><span class="date red">30 апреля 2021</span><div class="news_list_in_day">		<a href="/news/165" class="name with_arrow2">Уважаемые участники!</a>
+						<a href="/news/164" class="name with_arrow2">Уважаемые участники!</a>
+				</div></div><div class="news_item"><span class="date red">21 апреля 2021</span><div class="news_list_in_day">		<a href="/news/163" class="name with_arrow2">Уважаемые участники, инженерно-конструкторского профиля!</a>
+				</div></div><div class="news_item"><span class="date red">20 апреля 2021</span><div class="news_list_in_day">		<a href="/news/162" class="name with_arrow2">Уважаемые участники, инженерно-конструкторского профиля!</a>
+				</div></div><div class="news_item"><span class="date red">15 апреля 2021</span><div class="news_list_in_day">		<a href="/news/161" class="name with_arrow2">Уважаемые участники, всех профилей!</a>
+				</div></div><div class="news_item"><span class="date red">31 марта 2021</span><div class="news_list_in_day">		<a href="/news/160" class="name with_arrow2">Уважаемые участники, всех профилей!</a>
+				</div></div><div class="news_item"><span class="date red">26 марта 2021</span><div class="news_list_in_day">		<a href="/news/159" class="name with_arrow2">Уважаемые участники Аэрокосмического профиля!</a>
+				</div></div><div class="news_item"><span class="date red">25 марта 2021</span><div class="news_list_in_day">		<a href="/news/158" class="name with_arrow2">Исправленный список приглашенных на заключительный этап инженерно-конструктороского профиля</a>
+				</div></div><div class="news_item"><span class="date red">23 марта 2021</span><div class="news_list_in_day">		<a href="/news/157" class="name with_arrow2">Уважаемые участники, Соц-эк и Техно профиля и АК, ИТ, НТ!</a>
+						<a href="/news/156" class="name with_arrow2">Уважаемые участники Биотехнологического профиля!</a>
+						<a href="/news/155" class="name with_arrow2">Уважаемые участники профиля "Арктика"</a>
+						<a href="/news/154" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников профиля "Арктика"</a>
+				</div></div><div class="news_item"><span class="date red">22 марта 2021</span><div class="news_list_in_day">		<a href="/news/153" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников Биотехнологического профиля</a>
+						<a href="/news/152" class="name with_arrow2">Финал Инженерно-конструкторского профиля</a>
+				</div></div><div class="news_item"><span class="date red">17 марта 2021</span><div class="news_list_in_day">		<a href="/news/151" class="name with_arrow2">Уважаемые участники Аэрокосмического, Научно-Технологического профилей и профиля Информационные технологии!</a>
+						<a href="/news/150" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников Научно-технологического профиля</a>
+				</div></div><div class="news_item"><span class="date red">15 марта 2021</span><div class="news_list_in_day">		<a href="/news/149" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников профиля Аэрокосмический</a>
+						<a href="/news/147" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников профиля Информационные технологии</a>
+						<a href="/news/146" class="name with_arrow2">Уважаемые участники! Завершился Заключительный этап по социально-экономическому и технологическому профилю.</a>
+						<a href="/news/145" class="name with_arrow2">Уважаемые участники! Дополняем информацию по профилям Информационные технологии, Аэрокосмическому, Инженерно-конструкторскому, Биотехнологическому, Научно-технологическому, Арктике. </a>
+						<a href="/news/144" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников профиля Информационные технологии</a>
+				</div></div><div class="news_item"><span class="date red">12 марта 2021</span><div class="news_list_in_day">		<a href="/news/143" class="name with_arrow2">Уважаемые участники, социально-экономического профиля!</a>
+						<a href="/news/142" class="name with_arrow2">Изменения в расписании и в расписании защиты командного кейса на 13 марта</a>
+				</div></div><div class="news_item"><span class="date red">11 марта 2021</span><div class="news_list_in_day">		<a href="/news/141" class="name with_arrow2">Уважаемые участники! В ваших личных кабинетах есть титульные листы и бланки!</a>
+				</div></div><div class="news_item"><span class="date red">9 марта 2021</span><div class="news_list_in_day">		<a href="/news/140" class="name with_arrow2">Уважаемые участники! На данный момент не подгружены в личных кабинетах ЕСР бланки и титульные листы.</a>
+						<a href="/news/139" class="name with_arrow2">Уважаемые участники! Опубликовано расписание Заключительного этапа по социально-экономическому профилю.</a>
+						<a href="/news/138" class="name with_arrow2">Организационная информация для участников заключительного этапа Московской предпрофессиональной олимпиады школьников по технологическому профилю</a>
+				</div></div><div class="news_item"><span class="date red">7 марта 2021</span><div class="news_list_in_day">		<a href="/news/137" class="name with_arrow2">Уважаемые участники! Мы рады сообщить проходные баллы по практическому отборочному этапу!</a>
+				</div></div><div class="news_item"><span class="date red">19 февраля 2021</span><div class="news_list_in_day">		<a href="/news/136" class="name with_arrow2">Уважаемые участники! Остался 1 день! Напоминаем! До 20 февраля 2021 г. до 23.59 </a>
+				</div></div><div class="news_item"><span class="date red">16 февраля 2021</span><div class="news_list_in_day">		<a href="/news/135" class="name with_arrow2">Расписание консультаций для инженерно-конструкторского профиля</a>
+				</div></div><div class="news_item"><span class="date red">15 февраля 2021</span><div class="news_list_in_day">		<a href="/news/134" class="name with_arrow2">Уважаемые участники! До 20 февраля 2021 г. до 23.59 </a>
+						<a href="/news/132" class="name with_arrow2">Организационное собрание технологического профиля</a>
+						<a href="/news/131" class="name with_arrow2">Уважаемые участники! Напоминаем, что загрузить техническую документацию можно будет до 20 февраля 23.59.</a>
+				</div></div><div class="news_item"><span class="date red">3 февраля 2021</span><div class="news_list_in_day">		<a href="/news/133" class="name with_arrow2">Уважаемые участники! </a>
+						<a href="/news/130" class="name with_arrow2">Уважаемые участники биотехнологического профиля!</a>
+						<a href="/news/129" class="name with_arrow2">Уважаемые участники! </a>
+				</div></div><div class="news_item"><span class="date red">27 января 2021</span><div class="news_list_in_day">		<a href="/news/128" class="name with_arrow2">Уважаемые участники! </a>
+				</div></div><div class="news_item"><span class="date red">19 января 2021</span><div class="news_list_in_day">		<a href="/news/127" class="name with_arrow2">Презентация кейсов профиля "Арктика"</a>
+						<a href="/news/126" class="name with_arrow2">Уважаемые участники! Опубликованы списки приглашенных участников на практический тур отборочного этапа.</a>
+				</div></div><div class="news_item"><span class="date red">18 января 2021</span><div class="news_list_in_day">		<a href="/news/125" class="name with_arrow2">Уважаемые участники социально-экономического профиля!</a>
+				</div></div><div class="news_item"><span class="date red">15 января 2021</span><div class="news_list_in_day">		<a href="/news/124" class="name with_arrow2">Уважаемые участники! Вам необходимо зарегистрироваться до 01.02.2021 г.</a>
+				</div></div><div class="news_item"><span class="date red">13 января 2021</span><div class="news_list_in_day">		<a href="/news/122" class="name with_arrow2">Полезные материалы для профиля "Арктика"</a>
+				</div></div><div class="news_item"><span class="date red">12 января 2021</span><div class="news_list_in_day">		<a href="/news/123" class="name with_arrow2">Уважаемые участники социально-экономического профиля!</a>
+				</div></div><div class="news_item"><span class="date red">10 января 2021</span><div class="news_list_in_day">		<a href="/news/171" class="name with_arrow2">Открыта регистрация для участия в практическом туре отборочного этапа</a>
+						<a href="/news/168" class="name with_arrow2">Открыта регистрация для участия в практическом туре отборочного этапа</a>
+						<a href="/news/167" class="name with_arrow2">Открыта регистрация для участия в практическом туре отборочного этапа</a>
+						<a href="/news/148" class="name with_arrow2">Открыта регистрация для участия в практическом туре отборочного этапа</a>
+						<a href="/news/119" class="name with_arrow2">Открыта регистрация для участия в практическом туре отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">24 декабря 2020</span><div class="news_list_in_day">		<a href="/news/117" class="name with_arrow2">Уважаемые участники! Регистрация на Портале МГК</a>
+						<a href="/news/114" class="name with_arrow2">Проходные баллы по результатам первого тура отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">23 декабря 2020</span><div class="news_list_in_day">		<a href="/news/116" class="name with_arrow2">Презентация кейсов Инженерно-конструкторского профиля</a>
+						<a href="/news/113" class="name with_arrow2">Проходные баллы по результатам первого тура отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">22 декабря 2020</span><div class="news_list_in_day">		<a href="/news/111" class="name with_arrow2">Уважаемые участники социально-экономического профиля!</a>
+				</div></div><div class="news_item"><span class="date red">21 декабря 2020</span><div class="news_list_in_day">		<a href="/news/112" class="name with_arrow2">Результаты первого тура отборочного этапа</a>
+						<a href="/news/109" class="name with_arrow2">Уважаемые участники профиля "Информационные технологии"!</a>
+						<a href="/news/108" class="name with_arrow2">Уважаемые участники Биотехнологического профиля!</a>
+				</div></div><div class="news_item"><span class="date red">18 декабря 2020</span><div class="news_list_in_day">		<a href="/news/106" class="name with_arrow2">Уважаемые участники социально-экономического профиля!</a>
+						<a href="/news/105" class="name with_arrow2">Уважаемые участники Научно-технологического профиля!</a>
+				</div></div><div class="news_item"><span class="date red">17 декабря 2020</span><div class="news_list_in_day">		<a href="/news/104" class="name with_arrow2">Презентация домашних кейсов технологического профиля заключительного этапа</a>
+						<a href="/news/103" class="name with_arrow2">Уважаемые участники!</a>
+				</div></div><div class="news_item"><span class="date red">16 декабря 2020</span><div class="news_list_in_day">		<a href="/news/102" class="name with_arrow2">Уважаемые участники профиля ИТ!</a>
+						<a href="/news/100" class="name with_arrow2">Уважаемые участники биотехнологического профиля!</a>
+				</div></div><div class="news_item"><span class="date red">11 декабря 2020</span><div class="news_list_in_day">		<a href="/news/99" class="name with_arrow2">Уважаемые участники отборочного этапа по информатике!</a>
+				</div></div><div class="news_item"><span class="date red">1 декабря 2020</span><div class="news_list_in_day">		<a href="/news/98" class="name with_arrow2">Предложены для выполнения задания по предметам в рамках V московской предпрофессиональной олимпиады</a>
+						<a href="/news/96" class="name with_arrow2">Стартовала V московская предпрофессиональная олимпиада</a>
+				</div></div><div class="news_item"><span class="date red">30 ноября 2020</span><div class="news_list_in_day">		<a href="/news/95" class="name with_arrow2">Приглашаем принять участие в отборочном этапе олимпиады!</a>
+				</div></div><div class="news_item"><span class="date red">25 ноября 2020</span><div class="news_list_in_day">		<a href="/news/93" class="name with_arrow2">Уважаемые участники!</a>
+				</div></div><div class="news_item"><span class="date red">31 мая 2020</span><div class="news_list_in_day">		<a href="/news/91" class="name with_arrow2">Поздравляем победителей и призеров! </a>
+				</div></div><div class="news_item"><span class="date red">29 мая 2020</span><div class="news_list_in_day">		<a href="/news/92" class="name with_arrow2">Новая новость</a>
+				</div></div><div class="news_item"><span class="date red">19 мая 2020</span><div class="news_list_in_day">		<a href="/news/90" class="name with_arrow2">Информация для участников заключительного этапа!</a>
+				</div></div><div class="news_item"><span class="date red">8 мая 2020</span><div class="news_list_in_day">		<a href="/news/89" class="name with_arrow2">Информация для участников заключительного этапа!</a>
+				</div></div><div class="news_item"><span class="date red">28 апреля 2020</span><div class="news_list_in_day">		<a href="/news/88" class="name with_arrow2">О проведении командной защиты решений домашних кейсовых заданий</a>
+				</div></div><div class="news_item"><span class="date red">27 апреля 2020</span><div class="news_list_in_day">		<a href="/news/87" class="name with_arrow2">Правила проведения этапа командной защиты решения домашних кейсовых заданий (02.05.2020)</a>
+				</div></div><div class="news_item"><span class="date red">22 апреля 2020</span><div class="news_list_in_day">		<a href="/news/86" class="name with_arrow2">Список победителей и призеров Московской предпрофессиональной олимпиады школьников.</a>
+						<a href="/news/85" class="name with_arrow2">Уважаемые участники, определены даты теоретического тура и изменены даты защиты кейсов у некоторых профилей!</a>
+				</div></div><div class="news_item"><span class="date red">20 апреля 2020</span><div class="news_list_in_day">		<a href="/news/84" class="name with_arrow2">Сдача материалов по кейсам продлена до 21 апреля!</a>
+				</div></div><div class="news_item"><span class="date red">16 апреля 2020</span><div class="news_list_in_day">		<a href="/news/82" class="name with_arrow2">Открыта регистрация для участия в заключительном этапе предпрфессиональной олимпиады</a>
+				</div></div><div class="news_item"><span class="date red">15 апреля 2020</span><div class="news_list_in_day">		<a href="/news/80" class="name with_arrow2">Уважаемые участники, ознакомьтесь с тем, что необходимо сделать для участия в заключительном этапе.</a>
+						<a href="/news/78" class="name with_arrow2">Уважаемые участники, внесены изменения в Регламент.</a>
+				</div></div><div class="news_item"><span class="date red">10 апреля 2020</span><div class="news_list_in_day">		<a href="/news/77" class="name with_arrow2">Уважаемые участники, рады вам сообщить, что принято решение о проведении заключительного этапа Московской предпрофессиональной олимпиады школьников.</a>
+				</div></div><div class="news_item"><span class="date red">6 апреля 2020</span><div class="news_list_in_day">		<a href="/news/76" class="name with_arrow2">Апелляция по результатам заключительном этапа для участников  профиля информационные технологии</a>
+						<a href="/news/75" class="name with_arrow2">Апелляция по результатам заключительном этапа для участников биотехнологического профиля</a>
+				</div></div><div class="news_item"><span class="date red">18 марта 2020</span><div class="news_list_in_day">		<a href="/news/74" class="name with_arrow2">Проведение очных этапов предпрофессиональной олимпиады переносится на более поздний срок</a>
+				</div></div><div class="news_item"><span class="date red">17 марта 2020</span><div class="news_list_in_day">		<a href="/news/73" class="name with_arrow2">Указ мэра г. Москвы Собянина С. С.</a>
+				</div></div><div class="news_item"><span class="date red">13 марта 2020</span><div class="news_list_in_day">		<a href="/news/72" class="name with_arrow2">В ЛК доступны бланки для участия в заключительном этапе</a>
+						<a href="/news/71" class="name with_arrow2">В ЛК доступны бланки для участия в заключительном этапе</a>
+				</div></div><div class="news_item"><span class="date red">4 марта 2020</span><div class="news_list_in_day">		<a href="/news/70" class="name with_arrow2">Вебинар о кейсах в Аэрокосмическом профиле.</a>
+				</div></div><div class="news_item"><span class="date red">18 февраля 2020</span><div class="news_list_in_day">		<a href="/news/68" class="name with_arrow2">Границы баллов для прохождения на заключительный этап </a>
+				</div></div><div class="news_item"><span class="date red">5 декабря 2019</span><div class="news_list_in_day">		<a href="/news/67" class="name with_arrow2">Задания отборочного этапа доступны по всем предметам</a>
+				</div></div><div class="news_item"><span class="date red">30 ноября 2019</span><div class="news_list_in_day">		<a href="/news/66" class="name with_arrow2">Отборочный этап 2019-2020</a>
+				</div></div><div class="news_item"><span class="date red">4 июня 2019</span><div class="news_list_in_day">		<a href="/news/65" class="name with_arrow2">Дипломы победителей и призеров Инженерно-конструкторского направления</a>
+				</div></div><div class="news_item"><span class="date red">17 мая 2019</span><div class="news_list_in_day">		<a href="/news/64" class="name with_arrow2">Награждение призеров и победителей Инженерно-конструкторского направления</a>
+				</div></div><div class="news_item"><span class="date red">8 апреля 2019</span><div class="news_list_in_day">		<a href="/news/62" class="name with_arrow2">Ответы на вопросы по технологическому направлению </a>
+				</div></div><div class="news_item"><span class="date red">5 апреля 2019</span><div class="news_list_in_day">		<a href="/news/61" class="name with_arrow2">Апелляция по научно-технологическому направлению</a>
+				</div></div><div class="news_item"><span class="date red">4 апреля 2019</span><div class="news_list_in_day">		<a href="/news/60" class="name with_arrow2">Апелляция инженерно-конструкторское направление.</a>
+				</div></div><div class="news_item"><span class="date red">19 марта 2019</span><div class="news_list_in_day">		<a href="/news/59" class="name with_arrow2">Расписание финальных испытаний Инженерно-конструкторского направления 23-24 марта.</a>
+						<a href="/news/58" class="name with_arrow2">Заключительный этап научно-технологического направления</a>
+				</div></div><div class="news_item"><span class="date red">5 марта 2019</span><div class="news_list_in_day">		<a href="/news/57" class="name with_arrow2">Портал для регистрации команд и загрузки решения домашних задач (кейсов).</a>
+				</div></div><div class="news_item"><span class="date red">1 марта 2019</span><div class="news_list_in_day">		<a href="/news/56" class="name with_arrow2">Домашнее задание по научно-технологическому направлению</a>
+				</div></div><div class="news_item"><span class="date red">27 февраля 2019</span><div class="news_list_in_day">		<a href="/news/55" class="name with_arrow2">Группа для поиска участников в команду </a>
+				</div></div><div class="news_item"><span class="date red">7 февраля 2019</span><div class="news_list_in_day">		<a href="/news/54" class="name with_arrow2">Собрание участников заключительного этапа Инженерно-конструкторского направления</a>
+				</div></div><div class="news_item"><span class="date red">5 февраля 2019</span><div class="news_list_in_day">		<a href="/news/53" class="name with_arrow2">Проходные баллы на заключительный этап</a>
+						<a href="/news/52" class="name with_arrow2">Проходной балл для Инженерно-конструкторского направления.</a>
+				</div></div><div class="news_item"><span class="date red">25 января 2019</span><div class="news_list_in_day">		<a href="/news/110" class="name with_arrow2">Апелляция к результатам отборочного этапа</a>
+						<a href="/news/51" class="name with_arrow2">Апелляция к результатам отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">9 января 2019</span><div class="news_list_in_day">		<a href="/news/50" class="name with_arrow2">Кейсы по инженерно-конструкторскому направлению</a>
+				</div></div><div class="news_item"><span class="date red">24 декабря 2018</span><div class="news_list_in_day">		<a href="/news/49" class="name with_arrow2">Продление сроков отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">10 декабря 2018</span><div class="news_list_in_day">		<a href="/news/47" class="name with_arrow2">Задание по информатике</a>
+				</div></div><div class="news_item"><span class="date red">6 декабря 2018</span><div class="news_list_in_day">		<a href="/news/45" class="name with_arrow2">Отборочный этап</a>
+				</div></div><div class="news_item"><span class="date red">29 ноября 2018</span><div class="news_list_in_day">		<a href="/news/44" class="name with_arrow2">Старт отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">10 мая 2018</span><div class="news_list_in_day">		<a href="/news/42" class="name with_arrow2">Церемония награждения для технологического направления</a>
+						<a href="/news/41" class="name with_arrow2">Церемония награждения для технологического направления</a>
+				</div></div><div class="news_item"><span class="date red">23 апреля 2018</span><div class="news_list_in_day">		<a href="/news/40" class="name with_arrow2">Церемония награждения для Инженерно-конструкторского направления </a>
+				</div></div><div class="news_item"><span class="date red">28 марта 2018</span><div class="news_list_in_day">		<a href="/news/39" class="name with_arrow2">Итоги Инженерно конструкторского направления Московской предпрофессиональной олимпиады школьников 2018</a>
+				</div></div><div class="news_item"><span class="date red">26 марта 2018</span><div class="news_list_in_day">		<a href="/news/38" class="name with_arrow2">Домашнее задание по научно технологическому направлению</a>
+				</div></div><div class="news_item"><span class="date red">19 марта 2018</span><div class="news_list_in_day">		<a href="/news/37" class="name with_arrow2">Изменилась аудитория! Показ работ и апелляция для Инженерно-конструкторского направления.</a>
+				</div></div><div class="news_item"><span class="date red">15 марта 2018</span><div class="news_list_in_day">		<a href="/news/36" class="name with_arrow2">Рейтинг финалистов инженерно-конструкторского направления Московской предпрофессиональной олимпиады школьников 2018 г.</a>
+				</div></div><div class="news_item"><span class="date red">3 марта 2018</span><div class="news_list_in_day">		<a href="/news/35" class="name with_arrow2">Распределение по потокам на второй тур 4.03.2018 для Инженерно-конструкторского направления. </a>
+						<a href="/news/34" class="name with_arrow2">Распределение команд по техническому направлению</a>
+				</div></div><div class="news_item"><span class="date red">1 марта 2018</span><div class="news_list_in_day">		<a href="/news/33" class="name with_arrow2">Опубликован список зарегистрированных команд на очные испытания инженерно конструкторского направления. </a>
+				</div></div><div class="news_item"><span class="date red">27 февраля 2018</span><div class="news_list_in_day">		<a href="/news/32" class="name with_arrow2">Заключительный этап инженерно-конструкторского направления Московской предпрофессиональной олимпиады 2018 будет проходить  3 и 4 марта.</a>
+				</div></div><div class="news_item"><span class="date red">16 февраля 2018</span><div class="news_list_in_day">		<a href="/news/31" class="name with_arrow2">Прием проектной документации на решение кейсовых задач. Инженерно-конструкторское направление. </a>
+						<a href="/news/30" class="name with_arrow2">Прием проектной документации на решение кейсовых задач. Инженерно-конструкторское направление. </a>
+				</div></div><div class="news_item"><span class="date red">12 февраля 2018</span><div class="news_list_in_day">		<a href="/news/29" class="name with_arrow2">Сбор участников Московской предпрофессиональной олимпиады технологического направления.</a>
+				</div></div><div class="news_item"><span class="date red">2 февраля 2018</span><div class="news_list_in_day">		<a href="/news/27" class="name with_arrow2">Определены граничные баллы по всем направлениям олимпиады</a>
+				</div></div><div class="news_item"><span class="date red">30 января 2018</span><div class="news_list_in_day">		<a href="/news/26" class="name with_arrow2">Старт заключительного этапа для Инженерно-конструкторского направления, общее собрание финалистов.</a>
+						<a href="/news/25" class="name with_arrow2">Списки приглашенных на заключительный этап Инженерно-конструкторского направления</a>
+				</div></div><div class="news_item"><span class="date red">29 января 2018</span><div class="news_list_in_day">		<a href="/news/24" class="name with_arrow2">Результаты отборочного этапа</a>
+						<a href="/news/23" class="name with_arrow2">Домашние кейсовые задачи нулевого тура для Инженерно-конструкторского направления</a>
+				</div></div><div class="news_item"><span class="date red">25 января 2018</span><div class="news_list_in_day">		<a href="/news/22" class="name with_arrow2">Путевка в Артек</a>
+				</div></div><div class="news_item"><span class="date red">14 декабря 2017</span><div class="news_list_in_day">		<a href="/news/3" class="name with_arrow2">Начался отборочный этап Московской предпрофессиональной олимпиады школьников.</a>
+				</div></div><div class="news_item"><span class="date red">1 декабря 2017</span><div class="news_list_in_day">		<a href="/news/43" class="name with_arrow2">Старт отборочного этапа</a>
+						<a href="/news/20" class="name with_arrow2">Старт отборочного этапа</a>
+				</div></div><div class="news_item"><span class="date red">31 марта 2017</span><div class="news_list_in_day">		<a href="/news/19" class="name with_arrow2">Всероссийский конкурс школьных проектов</a>
+				</div></div><div class="news_item"><span class="date red">28 марта 2017</span><div class="news_list_in_day">		<a href="/news/17" class="name with_arrow2">Объявлена дата и место награждения победителей и призеров инженерно-конструкторского направления, а также, апелляция по индивидуальным заданиям. </a>
+				</div></div><div class="news_item"><span class="date red">27 марта 2017</span><div class="news_list_in_day">		<a href="/news/18" class="name with_arrow2">ПРОЕКТОРИЯ</a>
+				</div></div><div class="news_item"><span class="date red">20 марта 2017</span><div class="news_list_in_day">		<a href="/news/16" class="name with_arrow2">Опубликованы задания очного тура инженерно-конструкторского направления Московской предпрофессиональной олимпиады школьников</a>
+				</div></div><div class="news_item"><span class="date red">3 марта 2017</span><div class="news_list_in_day">		<a href="/news/15" class="name with_arrow2">Организационная информация для участников финальных испытаний инженерно-конструкторского направления Московской предпрофессиональной олимпиады школьников 4 и 5 марта 2017 года</a>
+				</div></div><div class="news_item"><span class="date red">2 марта 2017</span><div class="news_list_in_day">		<a href="/news/14" class="name with_arrow2">Заключительный этап олимпиады по научно-технологическому направлению</a>
+				</div></div><div class="news_item"><span class="date red">28 февраля 2017</span><div class="news_list_in_day">		<a href="/news/13" class="name with_arrow2">4 и 5 марта заключительный этап инженерно-конструкторского направления в Московском Политехе</a>
+						<a href="/news/10" class="name with_arrow2">1 марта 2017 года — организационная встреча в рамках научно-технологического направления</a>
+				</div></div><div class="news_item"><span class="date red">21 февраля 2017</span><div class="news_list_in_day">		<a href="/news/9" class="name with_arrow2">Опубликовано домашнее задание по научно-технологическому направлению</a>
+				</div></div><div class="news_item"><span class="date red">17 февраля 2017</span><div class="news_list_in_day">		<a href="/news/8" class="name with_arrow2">Итоги отборочного этапа Московской предпрофессиональной олимпиады школьников</a>
+						<a href="/news/7" class="name with_arrow2">Установлены критерии отбора на заключительный этап предпрофессиональной олимпиады по направлению "Технология"</a>
+				</div></div><div class="news_item"><span class="date red">15 февраля 2017</span><div class="news_list_in_day">		<a href="/news/6" class="name with_arrow2">Завершение отборочного этапа.</a>
+				</div></div><div class="news_item"><span class="date red">13 февраля 2017</span><div class="news_list_in_day">		<a href="/news/5" class="name with_arrow2">18 февраля в Московском Политехе пройдет сбор финалистов отборочного тура инженерно-конструкторского направления Московской предпрофессиональной олимпиады школьников.</a>
+				</div></div><div class="news_item"><span class="date red">10 февраля 2017</span><div class="news_list_in_day">		<a href="/news/4" class="name with_arrow2">Сбор участников Московской предпрофессиональной олимпиады технологического направления. </a>
+				</div></div><div class="news_item"><span class="date red">30 ноября 1999</span><div class="news_list_in_day">		<a href="/news/184" class="name with_arrow2">Регистрация будет открыта позже.</a>
+						<a href="/news/118" class="name with_arrow2">Вторая часть презентации Кейсов для Инженерно-конструкторского профиля </a>
+						<a href="/news/63" class="name with_arrow2">Список призеров и победителей Инженерно-конструкторского направления в 2019 г.</a>
+		</div></div>
+</div>
+<span id="pend"></span>
+<form method="POST" id="nloader" style="display: none;">
+	<input type="hidden" name="profile" value="0">
+	<input type="hidden" name="count" value="20">
+	<input type="hidden" name="predate" value="30 ноября 1999">
+</form>
+	</div>
+</div>
+<div class="footer">
+	<div class="content">
+		<div class="f_menu">
+			<a class="flogo" href="/"><img src="/images/wlogo.svg"/></a>
+			<a href="https://vk.com/mosh_olymp" class="ms" style="font-size: 24px; text-decoration: none;"><i class="icon-vk"></i></a>
+			<div class="menu">
+				
+
+<a href="/docs" class="">Документы</a>
+
+<a href="/contacts" class="">Контакты</a>
+				<a class="ms" href="mailto:predprof@olimpiada.ru"><p>Нашли ошибку или опечатку?</p></a>
+			</div>
+		</div>
+		<div class="delim"></div>
+		<div class="f_banners">
+			<div class="fb-text">
+				Партнеры<br>и организаторы
+			</div>
+			<span></span>
+			<a target="_blank" href="https://www.mos.ru/donm/"><img src="/images/dep-obr.svg" alt="Департамент образования и науки города Москвы"></a>
+			<span></span>
+			<a target="_blank" href="https://olimpiada.ru/"><img src="/images/oru.png" alt="Информационный портал olimpiada.ru"></a>
+			<span></span>
+			<a target="_blank" href="https://цпм.рф"><img src="/images/cpm.svg"/></a>
+		</div>
+		<div class="delim"></div>
+		<div class="f_copy">
+			<p><i class="icon-copy"></i>&nbsp;Московская олимпиада школьников 2023</p>
+			<div class="fs">
+				<a href="mailto:predprof@olimpiada.ru"><p>Нашли ошибку или опечатку?</p></a>
+				<a href="https://vk.com/mosh_olymp" class="fs" target="_blank"><i class="icon-vk"></i></a>
+			</div>
+		</div>
+	</div>
+</div><a class="upper ms"><i class="icon-arrow2"></i></a>
+</body></html>
